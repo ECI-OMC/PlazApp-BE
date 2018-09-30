@@ -1,9 +1,6 @@
 package com.eci.cosw.plazaap.model;
 
-/**
- * @author Santiago Carrillo
- * 8/21/17.
- */
+
 public class User
 {
 
@@ -17,19 +14,21 @@ public class User
 
     private String lastname;
 
-    private String username;
+    private Boolean productor;
+
 
 
     public User()
     {
     }
 
-    public User( String email, String password, String firstname, String lastname )
+    public User( String email, String password, String firstname, String lastname, boolean productor )
     {
         this.email = email;
         this.password = password;
         this.firstname = firstname;
         this.lastname = lastname;
+        this.productor = productor;
     }
 
 
@@ -83,15 +82,14 @@ public class User
         this.lastname = lastname;
     }
 
-    public String getUsername()
-    {
-        return username;
+    public Boolean getProductor() {
+        return productor;
     }
 
-    public void setUsername( String username )
-    {
-        this.username = username;
+    public void setProductor(Boolean productor) {
+        this.productor = productor;
     }
+
 
     @Override
     public String toString()

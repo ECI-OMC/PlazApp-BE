@@ -14,9 +14,11 @@ public interface UserService
 
     User getUser( Long id );
 
-    User createUser( User user );
+    void addUser( User user );
 
     User findUserByEmail( String email );
 
     User findUserByEmailAndPassword( String email, String password );
+
+    List<User> getProductores();
 }
