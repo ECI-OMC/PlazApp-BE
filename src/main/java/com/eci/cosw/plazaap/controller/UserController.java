@@ -36,14 +36,13 @@ public class UserController
         String username = login.getEmail();
         String password = login.getPassword();
 
-        User user = userService.getUser( 0l );
 
-        if ( user == null )
+        if ( login == null )
         {
             throw new ServletException( "User email not found." );
         }
 
-        String pwd = user.getPassword();
+        String pwd = login.getPassword();
 
         if ( !password.equals( pwd ) )
         {
@@ -62,8 +61,8 @@ public class UserController
         return userService.getUsers();
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
-    @RequestMapping( value = "/todo", method = RequestMethod.POST )
+    //@CrossOrigin(origins = "http://localhost:3000")
+    @RequestMapping( value = "/user", method = RequestMethod.POST )
     public void addUser(@RequestBody User newUser){
         userService.addUser(newUser);
     }
