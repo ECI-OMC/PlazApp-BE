@@ -10,6 +10,9 @@ public class Product {
     private String description;
     private int price;
     private Date date;
+    private String type;
+    private int quantity;
+    private String quantUnity;
 
     public Product(){
 
@@ -18,8 +21,16 @@ public class Product {
     public Product(String name, String description, int price){
         this.name = name;
         this.description = description;
-        this.description = description;
         this.date = Calendar.getInstance().getTime();
+    }
+
+    public Product(String type, String name, String quantUnity, int quantity, String description, int price) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.type = type;
+        this.quantity = quantity;
+        this.quantUnity = quantUnity;
     }
 
     public int getId() {
@@ -60,6 +71,30 @@ public class Product {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getQuantUnity() {
+        return quantUnity;
+    }
+
+    public void setQuantUnity(String quantUnity) {
+        this.quantUnity = quantUnity;
     }
 
 
