@@ -24,7 +24,7 @@ public class AppConfiguration {
         MongoClient mongoClient = new MongoClient(serverAddress, credential, new MongoClientOptions.Builder().build());
 
 
-        return new SimpleMongoDbFactory(mongoClient, "plazapp");
+        return new SimpleMongoDbFactory(mongoClient, "plazaap");
     }
 
     @Bean
