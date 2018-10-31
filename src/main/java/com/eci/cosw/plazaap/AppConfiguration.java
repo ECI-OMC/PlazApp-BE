@@ -1,4 +1,4 @@
-package com.eci.cosw.plazaap.model;
+package com.eci.cosw.plazaap;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientOptions;

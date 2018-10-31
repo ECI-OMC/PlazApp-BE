@@ -3,7 +3,6 @@ package com.eci.cosw.plazaap;
 import com.eci.cosw.plazaap.config.JwtFilter;
 import com.eci.cosw.plazaap.data.ProductRepository;
 import com.eci.cosw.plazaap.data.UserRepository;
-import com.eci.cosw.plazaap.model.AppConfiguration;
 import com.eci.cosw.plazaap.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -14,8 +13,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.data.mongodb.core.MongoOperations;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
 
 @SpringBootApplication
 public class PlazAppApplication implements CommandLineRunner {
