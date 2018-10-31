@@ -63,7 +63,8 @@ public class UserController
 
     //@CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping( value = "/user", method = RequestMethod.POST )
-    public void addUser(@RequestBody User newUser){
+    public void addUser(@RequestBody String email, String password, String firstname, String lastname, boolean productor){
+        User newUser = new User(email, password, firstname, lastname, productor);
         userService.addUser(newUser);
     }
 

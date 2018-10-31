@@ -13,4 +13,8 @@ public interface ProductService {
     List<Product> getProductByPrice(int price);
 
     void addProduct(Product prod);
+
+    List<String> getTypes();
+
+    List<String> getProds();
 }
