@@ -17,11 +17,6 @@ import org.springframework.data.mongodb.core.MongoOperations;
 @SpringBootApplication
 public class PlazAppApplication implements CommandLineRunner {
 
-	@Autowired
-	private UserRepository userRep;
-
-	@Autowired
-	private ProductRepository prodRep;
 
 
 	@Bean
@@ -42,13 +37,11 @@ public class PlazAppApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		userRep.deleteAll();
-
-		userRep.save(new User("prueba@mail.com","pass","Pepito","Perez",true));
 
 
-		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfiguration.class);
-		MongoOperations mongoOperation = (MongoOperations) applicationContext.getBean("mongoTemplate");
+
+		//ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfiguration.class);
+		//MongoOperations mongoOperation = (MongoOperations) applicationContext.getBean("mongoTemplate");
 
 	}
 }

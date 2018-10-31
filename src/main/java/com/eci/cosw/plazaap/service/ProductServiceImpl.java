@@ -1,5 +1,6 @@
 package com.eci.cosw.plazaap.service;
 
+import com.eci.cosw.plazaap.data.ProductRepository;
 import com.eci.cosw.plazaap.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,6 +10,9 @@ import java.util.List;
 
 @Service
 public class ProductServiceImpl implements ProductService{
+
+    @Autowired
+    private ProductRepository prodRep;
 
     private List<Product> products = new ArrayList<>();
     public List<String> TIPOS;
@@ -55,6 +59,7 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public void addProduct(Product prod) {
+        prodRep.save(prod);
         products.add(prod);
     }
 

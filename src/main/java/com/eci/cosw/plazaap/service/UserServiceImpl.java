@@ -1,5 +1,6 @@
 package com.eci.cosw.plazaap.service;
 
+import com.eci.cosw.plazaap.data.UserRepository;
 import com.eci.cosw.plazaap.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,6 +13,8 @@ import java.util.List;
 public class UserServiceImpl
     implements UserService
 {
+    @Autowired
+    private UserRepository userRep;
 
     private List<User> users = new ArrayList<>();
 
@@ -44,6 +47,7 @@ public class UserServiceImpl
     @Override
     public void addUser( User user )
     {
+        userRep.save(user);
         users.add( user );
     }
 
